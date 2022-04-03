@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+<form name="Sheet1">
+  <input name="Brand" type="text" placeholder="Brand">
+  <input name="Weight" type="text" placeholder="Weight">
+  <input name="Color" type="text" placeholder="Color">
+  <button type="submit">Send</button>
+</form>
+<script>
+  const scriptURL = '<https://script.google.com/macros/s/AKfycbw9zG5fi2WNiz6F2a81Dgez-OCkg72ii1QFuaWH29HoRE-EGP5i3Rvv4ZYwjBXVjQ8n/exec>'
+  const form = document.forms['Sheet1']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<form action="https://script.google.com/macros/s/AKfycbw9zG5fi2WNiz6F2a81Dgez-OCkg72ii1QFuaWH29HoRE-EGP5i3Rvv4ZYwjBXVjQ8n/exec" method="POST">
+  <div>
+    <label for="say">What greeting do you want to say?</label>
+    <input name="Brand" id="Brand" value="Brand">
+  </div>
+  <div>
+    <button>Send</button>
+  </div>
+</form>
+  </body>
+</html>
