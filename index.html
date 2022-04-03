@@ -32,9 +32,8 @@ jQuery(document).ready(function($) {
 </script>
 <script>
 window.setInterval("reloadIFrame();", 30000);
-
 function reloadIFrame() {
- document.frames["stock-frame"].location.reload();
+ document.getElementById("stock-frame").src="https://m2themama.github.io/yarn-tracker/";
 }
 </script>
   </head>
