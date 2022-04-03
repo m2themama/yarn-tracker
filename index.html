@@ -13,7 +13,7 @@
   	<div class="container">
     <h1>Yarn Tracker</h1>
 	<div class="mb-3">
-	<form name="Sheet1" action="https://script.google.com/macros/s/AKfycbwInybu--tav9JDl1K0yWYZRi8YlSWOHpqLRqO1b0WRgMZA85GY4AB6H5tfCq6J3B5B/exec" method="POST">
+	<form name="Sheet1" id="yarn-form" action="https://script.google.com/macros/s/AKfycbwInybu--tav9JDl1K0yWYZRi8YlSWOHpqLRqO1b0WRgMZA85GY4AB6H5tfCq6J3B5B/exec" method="POST">
   <div class="row">
   <div class="col">
         <input type="text" list="brands" name="Brand" class="form-control" id="Brand" placeholder="Brand">
@@ -864,8 +864,8 @@
 </form>
     </div>
 <script>
-	window.addEventListener("load", function() {
-  const form = document.getElementById('Sheet1');
+window.addEventListener("load", function() {
+  const form = document.getElementById('yarn-form');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
     const data = new FormData(form);
