@@ -30,6 +30,13 @@ jQuery(document).ready(function($) {
     });
 });
 </script>
+<script>
+window.setInterval("reloadIFrame();", 30000);
+
+function reloadIFrame() {
+ document.frames["frameNameHere"].location.reload();
+}
+</script>
   </head>
   <body>
   	<div class="container" id="container-form">
