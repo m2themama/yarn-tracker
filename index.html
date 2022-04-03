@@ -4,28 +4,54 @@
     <base target="_top">
   </head>
   <body>
-<form name="Sheet1">
-  <input name="Brand" type="text" placeholder="Brand">
-  <input name="Weight" type="text" placeholder="Weight">
-  <input name="Color" type="text" placeholder="Color">
-    <input name="Color" type="text" placeholder="Color">
-  <button type="submit">Send</button>
-</form>
-<script>
-  const scriptURL = '<https://script.google.com/macros/s/AKfycbwInybu--tav9JDl1K0yWYZRi8YlSWOHpqLRqO1b0WRgMZA85GY4AB6H5tfCq6J3B5B/exec>'
-  const form = document.forms['Sheet1']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-
 <form action="https://script.google.com/macros/s/AKfycbwInybu--tav9JDl1K0yWYZRi8YlSWOHpqLRqO1b0WRgMZA85GY4AB6H5tfCq6J3B5B/exec" method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="Brand">Brand</label>
+      <input type="text" class="form-control" id="brand" placeholder="Brand">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
   <div>
-    <label for="say">What greeting do you want to say?</label>
+    <label for="say">Brand?</label>
     <input name="Brand" id="Brand" value="Brand">
   </div>
   <div>
@@ -34,3 +60,4 @@
 </form>
   </body>
 </html>
+
