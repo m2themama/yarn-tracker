@@ -10,7 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
-<style>body{font-family: 'Barlow Condensed', sans-serif;}</style>
+<style>body{font-family: 'Barlow Condensed', sans-serif;} #container-form {
+    padding-top: 10px;
+    border: solid 1px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}</style>
 	<title>Yarn Tracker</title>
 	<script type="text/javascript">
 jQuery.noConflict();
@@ -26,7 +33,7 @@ jQuery(document).ready(function($) {
 </script>
   </head>
   <body>
-  	<div class="container">
+  	<div class="container" id="container-form">
     <h1>Yarn Tracker</h1>
 	<div class="mb-3">
 	<form name="Sheet1" id="yarn-form" action="https://script.google.com/macros/s/AKfycbwInybu--tav9JDl1K0yWYZRi8YlSWOHpqLRqO1b0WRgMZA85GY4AB6H5tfCq6J3B5B/exec" method="POST">
