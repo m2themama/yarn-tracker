@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 	<form name="Sheet1" id="yarn-form" action="https://script.google.com/macros/s/AKfycbwInybu--tav9JDl1K0yWYZRi8YlSWOHpqLRqO1b0WRgMZA85GY4AB6H5tfCq6J3B5B/exec" method="POST">
   <div class="row">
   <div class="col">
-        <input type="text" list="brands" onfocus="this.value=''" name="Brand" class="form-control" id="Brand" placeholder="Brand">
+        <input type="text" list="brands" onfocus="this.value=''" name="Brand" class="form-control" id="Brand" placeholder="Brand" required>
 		<datalist id="brands">
 <option>100Farbspiele</option>
 <option>100PureWool</option>
@@ -867,7 +867,11 @@ jQuery(document).ready(function($) {
 </div>
   <div class="row">
   <div class="col">
-    <input type="text" name="QTY" onfocus="this.value=''" class="form-control" id="QTY" placeholder="QTY">
+    <input type="text" list="QTYS" name="QTY" onfocus="this.value=''" class="form-control" id="QTY" placeholder="QTY">
+				<datalist id="QTYS">
+				<option>1</option>
+							<option>-1</option>
+		</datalist>
   </div>
   <div class="col">
     <input type="text" name="Purchase" onfocus="this.value=''" class="form-control" id="Purchase" placeholder="Purchase">
