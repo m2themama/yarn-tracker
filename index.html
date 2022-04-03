@@ -17,7 +17,17 @@
     padding-bottom: 10px;
     padding-left: 40px;
     padding-right: 40px;
-}</style>
+}
+.stock-frame {
+    // zoom: 0.25;
+    -moz-transform: scale(0.25);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.25);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.25);
+    -webkit-transform-origin: 0 0;
+}
+</style>
 	<title>Yarn Tracker</title>
 	<script type="text/javascript">
 jQuery.noConflict();
@@ -886,7 +896,7 @@ jQuery(document).ready(function($) {
   </div>
   </div>
 </form>
-<div style="height: 600px;"><center><iframe id="stock-frame"style="width: 100% !important; height: 600px !important;" src="https://docs.google.com/spreadsheets/d/1xGq34qiULicxF8NHYfpJXJ-t_wFJGJ0WMCHPC7Tz3Sw/edit?usp=sharing&range=B1:C999&amp;?&amp;rm=minimal&amp;single=true&amp;"></iframe></center></div>
+<div style="height: 600px;"><center><iframe id="stock-frame"style="width: 1280px; height: 786px;" src="https://docs.google.com/spreadsheets/d/1xGq34qiULicxF8NHYfpJXJ-t_wFJGJ0WMCHPC7Tz3Sw/edit?usp=sharing&range=B1:C999&amp;?&amp;rm=minimal&amp;single=true&amp;"></iframe></center></div>
         <script>
             function reload() {
                 document.getElementById('stock-frame').src += '';
